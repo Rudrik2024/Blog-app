@@ -1,17 +1,20 @@
 import { useParams } from "react-router-dom";
-import data from "../blogs/data.json";
+// import data from "../blogs/data.json";
 import Blog from "./blog";
+import { BlogType } from "../App";
 
-const BlogPost = () => {
+
+const BlogPost = ({blogs}:{blogs:BlogType[]}) => {
   const { id } = useParams();
-  const blog = data.blogs[parseInt(id!)];
+  const blog = blogs.find((blog) => blog.id == parseInt(id!));
+
 
   if (!blog) {
     return <div>Blog post not found</div>;
   }
 
   return (
-    <Blog content={blog.content} />
+    <Blog blog={blog} />
   );
 };
 

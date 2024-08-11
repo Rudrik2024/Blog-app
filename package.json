@@ -10,6 +10,7 @@
     "@types/node": "^16.18.105",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "clsx": "^2.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
@@ -48,5 +49,6 @@
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.9",
     "tailwindcss-animate": "^1.0.7"
-  }
+  },
+  "proxy": "https://crudcrud.com/api/2007987030a647b3903bbdb3369aa7b6"
 }

@@ -1,13 +1,16 @@
-import data from "../blogs/data.json";
 import { Link } from "react-router-dom";
+import { BlogType } from "../App";
 
-const AllBlogs = () => {
+
+
+const AllBlogs = ({blogs}:{blogs:BlogType[]}) => {
+
   return (
     <div className="container mx-auto px-10">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12">
-        {data.blogs.map((blog, index) => {
+        {blogs.map((blog, index) => {
           return (
-            <Link to={`/blog/${index}`} className="group">
+            <Link to={`/blog/${blog.id}`} className="group">
               <div className="">
                 <div className="w-full aspect-square">
                   <img
